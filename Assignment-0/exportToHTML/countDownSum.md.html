@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>countDownSum.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #a9b7c6;}
+.s3 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+countDownSum.md</font>
+</center></td></tr></table>
+<pre><span class="s0"># </span><span class="s2">15-countDownSum</span>
+
+<span class="s2">For this exercise </span><span class="s1">(</span><span class="s3">`</span><span class="s2">countDownSum.js</span><span class="s3">`</span><span class="s1">)</span><span class="s2">, you are tasked to write out solution code for a function titled </span><span class="s3">`</span><span class="s2">countDownSum</span><span class="s1">(</span><span class="s2">num</span><span class="s1">)</span><span class="s3">`</span><span class="s2">. This function will take in one argument, a </span><span class="s3">`</span><span class="s2">number</span><span class="s3">` </span><span class="s2">referenced as </span><span class="s3">`</span><span class="s2">num</span><span class="s3">`</span><span class="s2">. This function will output a </span><span class="s3">`</span><span class="s2">number</span><span class="s3">` </span><span class="s2">value that represents the sum of the series of numbers from </span><span class="s3">`</span><span class="s2">num</span><span class="s3">` </span><span class="s2">down to and including 1. Implement this solution with recursion. </span>
+
+<span class="s2">Note</span><span class="s1">: </span><span class="s2">This is technically not a standalone function like the previous exercises centered around; it is an instance method of a class. This minor factor helped with setting up a necessary part of the corresponding testing suite </span><span class="s1">(</span><span class="s2">test spec #3</span><span class="s1">)</span><span class="s2">. In light of this, please review the </span><span class="s3">`</span><span class="s2">this</span><span class="s3">` </span><span class="s2">keyword of JavaScript in order to fill out the business logic of the instance method. The primary purpose of this particular exercise is less about testing knowledge of Classes </span><span class="s1">(</span><span class="s2">we will go into that at a later date with other resources</span><span class="s1">) </span><span class="s2">and moreso about implementing a recursive approach, so please concentrate on the business logic of the instance method.</span>
+
+<span class="s1">_</span><span class="s2">In other words</span><span class="s1">_:</span>
+
+<span class="s3">```</span>
+<span class="s3">GIVEN: 5 as `num`</span>
+<span class="s3">WHEN: Invoking countDownSum(5)</span>
+<span class="s3">THEN: We output 15</span>
+<span class="s3">```</span>
+
+<span class="s3">```js</span>
+<span class="s3">class MySolution {</span>
+  <span class="s3">countDownSum(num) {</span>
+    <span class="s3">// Insert code here;</span>
+  <span class="s3">}</span>
+<span class="s3">}</span>
+
+<span class="s3">let studentSolution = new MySolution();</span>
+<span class="s3">studentSolution.countDownSum(5) -----&gt; 15;</span>
+<span class="s3">```</span>
+
+<span class="s1">_</span><span class="s2">An additional example</span><span class="s1">_:</span>
+
+<span class="s3">```</span>
+<span class="s3">GIVEN: 10 as `num`</span>
+<span class="s3">WHEN: Invoking countDownSum(10)</span>
+<span class="s3">THEN: We output 55</span>
+<span class="s3">```</span>
+
+<span class="s3">```js</span>
+<span class="s3">class MySolution {</span>
+  <span class="s3">countDownSum(num) {</span>
+    <span class="s3">// Insert code here;</span>
+  <span class="s3">}</span>
+<span class="s3">}</span>
+
+<span class="s3">let studentSolution = new MySolution();</span>
+<span class="s3">studentSolution.countDownSum(10) -----&gt; 55;</span>
+<span class="s3">```</span>
+
+<span class="s2">The test suite </span><span class="s1">(</span><span class="s3">`</span><span class="s2">countDownSum.test.js</span><span class="s3">`</span><span class="s1">) </span><span class="s2">is ultimately designed to verify four core features and expectations</span><span class="s1">:</span>
+
+<span class="s0">1) </span><span class="s2">The function should return a </span><span class="s3">`</span><span class="s2">number</span><span class="s3">` </span><span class="s1">(</span><span class="s2">finite</span><span class="s1">)</span>
+<span class="s0">2) </span><span class="s2">The function should return the sum of all numbers from </span><span class="s3">`</span><span class="s2">num</span><span class="s3">` </span><span class="s2">down to and including 1</span>
+<span class="s0">3) </span><span class="s2">The function should involve a recursive approach</span>
+<span class="s0">4) </span><span class="s2">In defending against hard-coding, any and all well-formed arguments will lead to sufficient coverage of core features/expectations #2 and #3 </span><span class="s1">(**</span><span class="s2">note</span><span class="s1">**: </span><span class="s2">see the respective test suite for more information</span><span class="s1">)</span></pre>
+</body>
+</html>

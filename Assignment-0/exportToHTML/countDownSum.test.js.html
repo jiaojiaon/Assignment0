@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>countDownSum.test.js</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #cc7832;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+countDownSum.test.js</font>
+</center></td></tr></table>
+<pre><span class="s0">// This file is only for viewing;</span>
+
+<span class="s1">let StudentSolution = require(</span><span class="s2">&quot;./countDownSum&quot;</span><span class="s1">);</span>
+<span class="s1">const { expect } = require(</span><span class="s2">&quot;chai&quot;</span><span class="s1">);</span>
+<span class="s1">const sinon = require(</span><span class="s2">&quot;sinon&quot;</span><span class="s1">);</span>
+
+<span class="s1">describe(</span><span class="s2">&quot;the countDownSum(num) function&quot;</span><span class="s1">, </span><span class="s3">function </span><span class="s1">() {</span>
+
+  <span class="s1">let submittedSolution;</span>
+
+  <span class="s1">beforeEach(</span><span class="s3">function</span><span class="s1">() {</span>
+    <span class="s1">submittedSolution = </span><span class="s3">new </span><span class="s1">StudentSolution();</span>
+  <span class="s1">})</span>
+
+  <span class="s1">it(</span><span class="s2">&quot;should return a number&quot;</span><span class="s1">, </span><span class="s3">function </span><span class="s1">() {</span>
+    <span class="s1">expect(submittedSolution.countDownSum(</span><span class="s4">3</span><span class="s1">), </span><span class="s2">&quot;the output is not a finite number&quot;</span><span class="s1">).to.be.finite;</span>
+  <span class="s1">})</span>
+
+  <span class="s1">it(</span><span class="s2">&quot;should return the sum of all numbers from `num` down to and including 1&quot;</span><span class="s1">, </span><span class="s3">function </span><span class="s1">() {</span>
+    <span class="s1">expect(submittedSolution.countDownSum(</span><span class="s4">10</span><span class="s1">)).to.equal(</span><span class="s4">55</span><span class="s1">);</span>
+  <span class="s1">})</span>
+
+  <span class="s1">it(</span><span class="s2">&quot;should be implemented recursively&quot;</span><span class="s1">, </span><span class="s3">function </span><span class="s1">() {</span>
+    <span class="s1">let mySpy = sinon.spy(submittedSolution, </span><span class="s2">&quot;countDownSum&quot;</span><span class="s1">);</span>
+    
+    <span class="s1">submittedSolution.countDownSum(</span><span class="s4">5</span><span class="s1">);</span>
+    <span class="s1">expect(mySpy.callCount).to.equal(</span><span class="s4">5</span><span class="s1">);</span>
+    
+    <span class="s1">mySpy.resetHistory();</span>
+
+    <span class="s1">submittedSolution.countDownSum(</span><span class="s4">10</span><span class="s1">);</span>
+    <span class="s1">expect(mySpy.callCount).to.equal(</span><span class="s4">10</span><span class="s1">);</span>
+
+    <span class="s1">mySpy.restore();</span>
+  <span class="s1">})</span>
+
+  <span class="s1">it(</span><span class="s2">&quot;should pass auxillary test cases&quot;</span><span class="s1">, </span><span class="s3">function</span><span class="s1">() {</span>
+    <span class="s1">expect(submittedSolution.countDownSum(</span><span class="s4">1</span><span class="s1">)).to.equal(</span><span class="s4">1</span><span class="s1">);</span>
+    <span class="s1">expect(submittedSolution.countDownSum(</span><span class="s4">2</span><span class="s1">)).to.equal(</span><span class="s4">3</span><span class="s1">);</span>
+    <span class="s1">expect(submittedSolution.countDownSum(</span><span class="s4">3</span><span class="s1">)).to.equal(</span><span class="s4">6</span><span class="s1">);</span>
+    <span class="s1">expect(submittedSolution.countDownSum(</span><span class="s4">4</span><span class="s1">)).to.equal(</span><span class="s4">10</span><span class="s1">);</span>
+    <span class="s1">expect(submittedSolution.countDownSum(</span><span class="s4">100</span><span class="s1">)).to.equal(</span><span class="s4">5050</span><span class="s1">);</span>
+  <span class="s1">})</span>
+
+<span class="s1">});</span>
+</pre>
+</body>
+</html>
