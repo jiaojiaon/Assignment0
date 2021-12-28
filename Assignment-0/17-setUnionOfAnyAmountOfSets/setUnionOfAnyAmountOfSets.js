@@ -1,5 +1,7 @@
 function setUnionOfAnyAmountOfSets(...args) {
-  // Insert code here;
+  var set = new Set();
+  args.forEach(S => S.forEach(e => set.add(e)))
+  return set;
 }
 
 // Do not edit this line;
