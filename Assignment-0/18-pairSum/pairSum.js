@@ -1,13 +1,15 @@
 function pairSum(nums, target) {
   if(nums.length <= 1){
-    throw 
-  }
-  for(var i = 0; i < nums.length-1; i++){
-    if(nums[i]+nums[i+1] == target){
-      return true;
+      throw error;
     }
-  }
-  return false;
+    for(var i = 0; i < nums.length; i++){
+       for(var j = 1; j < nums.length; j++){
+          if(nums[i]+nums[j] == target){
+            return true;
+          }
+       }
+    }
+    return false;
 }
 
 // Do not edit this line;
