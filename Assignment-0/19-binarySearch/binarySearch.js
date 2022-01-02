@@ -6,16 +6,18 @@ class MySolution {
   binarySearch(nums, target) {
     var start = 0;
     var end = nums.length-1;
-    while(start <= end){
-      var mid = Math.floor((start + end)/2);
-      if(arr[mid] == target) return true;
-      else if(arr[mid] < target){
-        start = mid+1;
-      }
-      else
-        end = mid-1;
-    }
-    return false;
+        while(start <= end){
+          var mid = Math.floor(end/2);
+          if(nums[mid] == target) return true;
+          else if(nums[mid] <= target){
+            start = mid+1;
+            return this.binarySearch(nums.slice(start+1, end), target);
+          }
+          else
+            end = mid-1;
+            return this.binarySearch(nums.slice(start, mid-1), target);
+        }
+        return false;
   }
 }
 
