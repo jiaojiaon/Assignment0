@@ -1,16 +1,11 @@
 function sumOfNumsWithinARange(nums, start, end) {
-  var startIndex = 0;
-    var endIndex = 0;
-
-    for(var i = 0; nums.length(); i++){
-      if(nums[i] == start){
-        startIndex = i;
-      }
-      if(nums[i] == end){
-        endIndex = i;
-      }
+  var count = 0;
+  for(var i = 0; i < nums.length; i++){
+    if(nums[i] >= start && nums[i] <= end){
+        count++;
     }
-    return (endIndex-startIndex)+1;
+  }
+  return count;
 }
 
 // Do not edit this line;
