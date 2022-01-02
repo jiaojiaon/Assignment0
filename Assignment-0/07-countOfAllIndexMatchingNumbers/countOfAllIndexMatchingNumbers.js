@@ -1,6 +1,6 @@
 function countOfAllIndexMatchingNumbers(nums) {
   var count = 0;
-     for(var i = 0; i < nums.length(); i++){
+     for(var i = 0; i < nums.length; i++){
        if(nums[i] == i){
          count++;
        }
